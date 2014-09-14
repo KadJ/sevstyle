@@ -1,0 +1,26 @@
+<% provide(:title, 'New object') %>
+<h1>Create a new object</h1>
+
+<div class="row">
+  <div class="creat_form">
+    <%= form_for(@hotel) do |f| %>
+
+
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :cost %>
+      <%= f.text_field :cost %>
+
+      <div class="field_boolean">
+        <%= f.label :breakfast %>
+        <%= f.check_box :breakfast %>
+      </div>
+
+      <%= f.label :description %>
+      <%= f.text_field :description %>   
+
+      <%= f.submit "Create new object", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

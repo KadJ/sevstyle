@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140910200039) do
+ActiveRecord::Schema.define(version: 20140912111306) do
+
+  create_table "hotels", force: true do |t|
+    t.float    "cost"
+    t.string   "title"
+    t.boolean  "breakfast"
+    t.float    "start_rating"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "hotels", ["title"], name: "index_hotels_on_title"
 
   create_table "users", force: true do |t|
     t.string   "name"
