@@ -1,0 +1,19 @@
+%h1 Hotels
+- if @hotels.empty? 
+  %b No hotels  
+
+- else
+  %table
+    %tr
+      %th Title
+      %th Cost
+      %th Breakfast
+      %th Description
+
+    - @hotels.each do |h|
+      %tr
+        %td= link_to h.title, hotel_path(h)
+        %td= h.cost
+        %td= h.breakfast
+        %td= h.description
+

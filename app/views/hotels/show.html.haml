@@ -1,0 +1,7 @@
+- provide(:title, 'show')
+
+%h1= @hotel.title
+%ul
+  %li #{@hotel.cost} руб.
+  %li= @hotel.description 
+  %li Breakfast: #{@hotel.breakfast}
